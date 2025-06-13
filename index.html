@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoCare Pro - Professional Car Workshop</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>AutoCare Pro - Expert Car Workshop & Service Center</title>
+    <meta name="description" content="Professional car repair and maintenance services. Expert mechanics, quality parts, competitive prices. Get instant WhatsApp quotes today!">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,19 +14,13 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
         /* Header */
-        header {
+        .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 1rem 0;
@@ -36,95 +31,150 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        nav {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
 
-        .nav-links a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .nav-links a:hover {
+        .nav-menu a:hover {
             color: #ffd700;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><text x="600" y="300" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">Car Workshop Background</text></svg>');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><g fill="%23ddd"><rect x="200" y="150" width="800" height="300" rx="20"/><circle cx="300" cy="450" r="50"/><circle cx="900" cy="450" r="50"/><rect x="250" y="200" width="700" height="150" rx="10" fill="%23bbb"/></g><text x="600" y="350" text-anchor="middle" font-size="24" font-family="Arial" fill="%23999">Professional Auto Service</text></svg>');
             background-size: cover;
             background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
             text-align: center;
             color: white;
             margin-top: 80px;
         }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .hero-content p {
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.3s both;
+            animation: slideInUp 1s ease-out 0.3s both;
         }
 
-        .cta-button {
-            background: #ff6b35;
-            color: white;
-            padding: 15px 30px;
-            border: none;
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
             border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background 0.3s;
             text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
             display: inline-block;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
         }
 
-        .cta-button:hover {
-            background: #e55a2b;
+        .btn-primary {
+            background: #ff4757;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Services Section */
         .services {
-            padding: 80px 0;
+            padding: 5rem 0;
             background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #7f8c8d;
             margin-bottom: 3rem;
-            color: #333;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .service-card {
@@ -132,147 +182,310 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
-            transition: transform 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .service-icon {
             font-size: 3rem;
-            color: #2a5298;
+            color: #ff4757;
             margin-bottom: 1rem;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.6;
+            color: #2c3e50;
         }
 
         .service-price {
-            color: #ff6b35;
+            color: #27ae60;
             font-weight: bold;
-            margin-top: 1rem;
             font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         /* Gallery Section */
         .gallery {
-            padding: 80px 0;
-            background: white;
+            padding: 5rem 0;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
-            margin-top: 3rem;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            height: 250px;
-            background: linear-gradient(45deg, #ddd, #eee);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            aspect-ratio: 4/3;
+            background: #ddd;
             cursor: pointer;
             transition: transform 0.3s;
         }
 
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
-        .gallery-placeholder {
-            color: #999;
-            font-size: 1rem;
-            text-align: center;
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #ff4757 0%, #2c3e50 100%);
+            opacity: 0.8;
+            z-index: 1;
         }
 
-        /* WhatsApp Quote Section */
-        .quote-section {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        .gallery-item::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
             color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .quote-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .whatsapp-btn {
-            background: white;
-            color: #25d366;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
             font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 2rem;
+            z-index: 2;
         }
 
-        .whatsapp-btn:hover {
-            background: #f0f0f0;
-            transform: scale(1.05);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
+        /* About Section */
+        .about {
+            padding: 5rem 0;
             background: #f8f9fa;
         }
 
-        .contact-info {
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .contact-item {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
             text-align: center;
-            padding: 2rem;
             background: white;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .contact-icon {
+        .stat-number {
             font-size: 2.5rem;
-            color: #2a5298;
+            font-weight: bold;
+            color: #ff4757;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #ff4757;
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+        }
+
+        .stars {
+            color: #ffd700;
             margin-bottom: 1rem;
         }
 
-        /* Footer */
-        footer {
-            background: #333;
+        .customer-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .customer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #2c3e50;
             color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #ff4757;
+            width: 30px;
+        }
+
+        .quote-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ff4757;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ff4757;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #ff4757;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
             text-align: center;
-            padding: 2rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #ccc;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            text-decoration: none;
         }
 
         /* Animations */
-        @keyframes fadeInUp {
+        @keyframes slideInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -283,106 +496,135 @@
             }
         }
 
-        /* Mobile Responsive */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-menu {
                 display: none;
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .hero-content p {
-                font-size: 1rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .services-grid {
+            .about-content,
+            .contact-content {
                 grid-template-columns: 1fr;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .stats {
+                grid-template-columns: 1fr;
             }
         }
 
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
+        /* Emergency Banner */
+        .emergency-banner {
+            background: #ff4757;
             color: white;
-            border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            padding: 0.5rem;
+            font-weight: bold;
+            animation: blink 1.5s infinite;
         }
 
-        .whatsapp-float:hover {
-            background-color: #20ba5a;
-            transform: scale(1.1);
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
         }
     </style>
 </head>
 <body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 24/7 EMERGENCY ROADSIDE ASSISTANCE AVAILABLE! Call: +1-800-AUTOCARE
+    </div>
+
     <!-- Header -->
-    <header>
-        <nav class="container">
+    <header class="header">
+        <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-car"></i> AutoCare Pro
+                <i class="fas fa-car-side"></i>
+                AutoCare Pro
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/1234567890?text=Hi%20AutoCare%20Pro!%20I%20need%20a%20quote%20for%20car%20service" 
+               class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Get Quote
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Professional Car Workshop</h1>
-            <p>Expert automotive repair and maintenance services you can trust</p>
-            <a href="#services" class="cta-button">View Our Services</a>
+            <h1>Expert Car Care You Can Trust</h1>
+            <p>Professional automotive repair and maintenance services with over 15 years of experience. Quality work, honest pricing, and customer satisfaction guaranteed.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Book Service Now</a>
+                <a href="https://wa.me/1234567890?text=Hi%20AutoCare%20Pro!%20I%20need%20a%20quote" 
+                   class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Our Expert Services</h2>
+            <p class="section-subtitle">Comprehensive automotive care for all makes and models</p>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-oil-can"></i>
                     </div>
-                    <h3>Oil Change & Lube</h3>
-                    <p>Complete oil change service with premium quality oil and filters to keep your engine running smoothly.</p>
-                    <div class="service-price">Starting from $35</div>
+                    <h3>Oil Change & Lubrication</h3>
+                    <p>Complete oil change service with premium synthetic or conventional oil. Includes multi-point inspection.</p>
+                    <div class="service-price">Starting from $39.99</div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-brake-system"></i>
                     </div>
-                    <h3>Brake Service</h3>
-                    <p>Professional brake inspection, repair, and replacement to ensure your vehicle's safety and performance.</p>
-                    <div class="service-price">Starting from $120</div>
+                    <h3>Brake Service & Repair</h3>
+                    <p>Professional brake inspection, pad replacement, rotor resurfacing, and complete brake system maintenance.</p>
+                    <div class="service-price">Starting from $89.99</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Battery & Electrical</h3>
+                    <p>Battery testing, replacement, alternator service, and complete electrical system diagnostics.</p>
+                    <div class="service-price">Starting from $129.99</div>
                 </div>
 
                 <div class="service-card">
@@ -390,53 +632,44 @@
                         <i class="fas fa-tire"></i>
                     </div>
                     <h3>Tire Services</h3>
-                    <p>Tire rotation, balancing, alignment, and replacement services to maximize tire life and performance.</p>
-                    <div class="service-price">Starting from $25</div>
+                    <p>Tire installation, balancing, rotation, alignment, and repair. Wide selection of premium tire brands.</p>
+                    <div class="service-price">Starting from $79.99</div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-car-battery"></i>
-                    </div>
-                    <h3>Battery Service</h3>
-                    <p>Battery testing, charging, and replacement services to prevent unexpected breakdowns.</p>
-                    <div class="service-price">Starting from $80</div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wrench"></i>
+                        <i class="fas fa-engine"></i>
                     </div>
                     <h3>Engine Diagnostics</h3>
-                    <p>Advanced computer diagnostics to identify and resolve engine performance issues quickly.</p>
-                    <div class="service-price">Starting from $95</div>
+                    <p>Advanced computer diagnostics, check engine light service, and comprehensive engine performance analysis.</p>
+                    <div class="service-price">Starting from $99.99</div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-fan"></i>
+                        <i class="fas fa-air-conditioner"></i>
                     </div>
-                    <h3>A/C Service</h3>
-                    <p>Air conditioning repair, recharge, and maintenance to keep you comfortable year-round.</p>
-                    <div class="service-price">Starting from $65</div>
+                    <h3>AC & Heating Service</h3>
+                    <p>Complete climate control system service including refrigerant recharge, leak detection, and repairs.</p>
+                    <div class="service-price">Starting from $149.99</div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-car-crash"></i>
+                        <i class="fas fa-transmission"></i>
                     </div>
                     <h3>Transmission Service</h3>
-                    <p>Complete transmission inspection, fluid change, and repair services for smooth operation.</p>
-                    <div class="service-price">Starting from $150</div>
+                    <p>Transmission fluid change, filter replacement, and complete transmission system maintenance.</p>
+                    <div class="service-price">Starting from $179.99</div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                        <i class="fas fa-car-wash"></i>
                     </div>
-                    <h3>General Repairs</h3>
-                    <p>Comprehensive automotive repair services for all makes and models with certified technicians.</p>
-                    <div class="service-price">Quote on Request</div>
+                    <h3>Detailing & Wash</h3>
+                    <p>Professional car wash, interior detailing, waxing, and paint protection services.</p>
+                    <div class="service-price">Starting from $49.99</div>
                 </div>
             </div>
         </div>
@@ -445,59 +678,147 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Our Workshop Gallery</h2>
+            <h2 class="section-title">Our Work Gallery</h2>
+            <p class="section-subtitle">See the quality of our professional automotive services</p>
+            
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-car" style="font-size: 3rem; color: #999;"></i>
-                        <p>Modern Workshop Equipment</p>
-                    </div>
+                <div class="gallery-item" data-title="Engine Repair Work">
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-tools" style="font-size: 3rem; color: #999;"></i>
-                        <p>Professional Tools</p>
-                    </div>
+                <div class="gallery-item" data-title="Brake System Overhaul">
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-user-tie" style="font-size: 3rem; color: #999;"></i>
-                        <p>Certified Technicians</p>
-                    </div>
+                <div class="gallery-item" data-title="Professional Detailing">
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-car-side" style="font-size: 3rem; color: #999;"></i>
-                        <p>Service in Progress</p>
-                    </div>
+                <div class="gallery-item" data-title="Transmission Service">
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-warehouse" style="font-size: 3rem; color: #999;"></i>
-                        <p>Clean Workshop</p>
-                    </div>
+                <div class="gallery-item" data-title="Diagnostic Equipment">
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-certificate" style="font-size: 3rem; color: #999;"></i>
-                        <p>Quality Certification</p>
-                    </div>
+                <div class="gallery-item" data-title="Clean Service Bay">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Quote Section -->
-    <section class="quote-section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="quote-content">
-                <h2>Get Instant Quote via WhatsApp</h2>
-                <p>Need a quick estimate for your car repair? Send us a message on WhatsApp with your car details and required service. Our experts will get back to you within minutes!</p>
-                <a href="https://wa.me/60123456789?text=Hi%20AutoCare%20Pro,%20I%20would%20like%20to%20get%20a%20quote%20for%20car%20service.%20My%20car%20details:%20" 
-                   class="whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    Get Quote on WhatsApp
-                </a>
+            <h2 class="section-title">Why Choose AutoCare Pro?</h2>
+            <div class="about-content">
+                <div>
+                    <h3>15+ Years of Excellence</h3>
+                    <p>AutoCare Pro has been serving the community since 2008, providing reliable and professional automotive services. Our team of certified mechanics has the expertise to handle all your vehicle needs, from routine maintenance to complex repairs.</p>
+                    
+                    <p>We use only high-quality parts and the latest diagnostic equipment to ensure your vehicle receives the best care possible. Our commitment to honesty, transparency, and customer satisfaction has made us the trusted choice for thousands of satisfied customers.</p>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15,000+</div>
+                            <div>Vehicles Serviced</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div>Customer Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div>Emergency Service</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5★</div>
+                            <div>Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Our Guarantees</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>12-Month/12,000-Mile Warranty</strong> on all repairs
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>Free Digital Inspection</strong> with every service
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>Upfront Pricing</strong> - No hidden fees
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>ASE Certified Technicians</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>Courtesy Shuttle Service</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                            <strong>30-Day Parts & Labor Guarantee</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Excellent service! They diagnosed my engine problem quickly and fixed it at a fair price. The staff was friendly and kept me informed throughout the process. Highly recommend!</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">SM</div>
+                        <div>
+                            <strong>Sarah Martinez</strong><br>
+                            <small>Verified Customer</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>I've been coming here for 3 years now. Always honest, professional, and fair pricing. They never try to sell you services you don't need. This is how car service should be!</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">MJ</div>
+                        <div>
+                            <strong>Mike Johnson</strong><br>
+                            <small>Regular Customer</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Fast, reliable service with great communication. They sent me photos of the issues and explained everything clearly. The WhatsApp updates were super convenient!</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">AL</div>
+                        <div>
+                            <strong>Amanda Lee</strong><br>
+                            <small>Happy Customer</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -505,50 +826,156 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+            <h2 class="section-title">Get Your Instant Quote</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <strong>Address:</strong><br>
+                            123 Auto Service Lane<br>
+                            Shah Alam, Selangor 40150<br>
+                            Malaysia
+                        </div>
                     </div>
-                    <h3>Address</h3>
-                    <p>123 Automotive Street<br>Petaling Jaya, Selangor 47400<br>Malaysia</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +60 3-5544 8899<br>
+                            Emergency: +60 12-345 6789
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@autocarepro.com<br>
+                            service@autocarepro.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            Mon-Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 8:00 AM - 4:00 PM<br>
+                            Sun: Emergency Only
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp contact-icon"></i>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            +60 12-345 6789<br>
+                            <em>Quick quotes & updates</em>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p>+60 12-345 6789<br>+60 3-7890 1234</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Working Hours</h3>
-                    <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Saturday: 8:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p>info@autocarepro.com<br>service@autocarepro.com</p>
+
+                <div class="quote-form">
+                    <h3>Request a Quote</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle">Vehicle Make & Model *</label>
+                            <input type="text" id="vehicle" name="vehicle" placeholder="e.g., Honda Civic 2020" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="oil-change">Oil Change & Lubrication</option>
+                                <option value="brake-service">Brake Service & Repair</option>
+                                <option value="battery-electrical">Battery & Electrical</option>
+                                <option value="tire-services">Tire Services</option>
+                                <option value="engine-diagnostics">Engine Diagnostics</option>
+                                <option value="ac-heating">AC & Heating Service</option>
+                                <option value="transmission">Transmission Service</option>
+                                <option value="detailing">Detailing & Wash</option>
+                                <option value="other">Other (please specify)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" placeholder="Describe any specific issues or symptoms..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Quote Request
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 AutoCare Pro. All rights reserved. | Professional Car Workshop Services</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoCare Pro</h3>
+                    <p>Your trusted automotive service center providing quality repairs and maintenance since 2008. We're committed to keeping you safe on the road.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Google My Business"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#services">Our Services</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#gallery">Gallery</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#about">About Us</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#contact">Contact</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Careers</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Oil Change</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Brake Repair</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Engine Diagnostics</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Tire Services</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">AC Repair</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#">Transmission Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Saturday:</strong> 8:00 AM - 4:00 PM</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Sunday:</strong> Emergency Only</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Emergency Line:</strong> 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCare Pro. All rights reserved. | Designed with ❤️ for automotive excellence</p>
+            </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/60123456789?text=Hi%20AutoCare%20Pro,%20I%20need%20help%20with%20my%20car." 
-       class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/601234567890?text=Hi%20AutoCare%20Pro!%20I%20need%20help%20with%20my%20vehicle.%20Can%20you%20provide%20a%20quote?" 
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -567,36 +994,147 @@
             });
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Form submission handling
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const vehicle = formData.get('vehicle');
+            const service = formData.get('service');
+            const message = formData.get('message') || 'No additional details provided';
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hi AutoCare Pro! I'd like to request a quote:
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+🚗 *Vehicle:* ${vehicle}
+👤 *Name:* ${name}
+📱 *Phone:* ${phone}
+🔧 *Service:* ${service}
+📝 *Details:* ${message}
 
-        // Observe service cards and gallery items
-        document.querySelectorAll('.service-card, .gallery-item, .contact-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
+Please provide me with a quote and available appointment times. Thank you!`;
+            
+            // Open WhatsApp with the message
+            const whatsappUrl = `https://wa.me/601234567890?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            alert('Your quote request has been prepared! You will now be redirected to WhatsApp to send it.');
+            
+            // Reset form
+            this.reset();
         });
 
-        // WhatsApp button click tracking
-        document.querySelectorAll('[href*="wa.me"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('WhatsApp link clicked');
-                // You can add analytics tracking here
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 60, 114, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Gallery click handlers (for future image modal implementation)
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // In a real implementation, you would open a modal with the full-size image
+                alert('Image modal would open here with: ' + this.getAttribute('data-title'));
             });
         });
+
+        // Service card hover effects with sound (if needed)
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Mobile menu toggle (for responsive design)
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Add mobile menu button for small screens
+        if (window.innerWidth <= 768) {
+            const navContainer = document.querySelector('.nav-container');
+            const mobileMenuBtn = document.createElement('button');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.style.cssText = 'background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;';
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            navContainer.appendChild(mobileMenuBtn);
+        }
+
+        // Counter animation for statistics
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
+                        const increment = target / 100;
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            if (current < target) {
+                                current += increment;
+                                counter.textContent = Math.ceil(current).toLocaleString() + 
+                                    (counter.textContent.includes('%') ? '%' : 
+                                     counter.textContent.includes('★') ? '★' : 
+                                     counter.textContent.includes('+') ? '+' : '');
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = counter.textContent; // Keep original format
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Initialize counter animation when page loads
+        window.addEventListener('load', animateCounters);
+
+        // SEO and Performance optimizations
+        // Lazy load images (when actual images are added)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+        }
+
+        // Add to home screen prompt (for mobile PWA-like experience)
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+        });
+
+        console.log('🚗 AutoCare Pro Website Loaded Successfully!');
+        console.log('📱 WhatsApp integration ready');
+        console.log('🎨 All animations and interactions initialized');
     </script>
 </body>
 </html>
